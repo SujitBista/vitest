@@ -10,7 +10,7 @@ describe('max', () => {
  //just like describe method here we need two arguments
  // the first argument is a string that represents our test name. 
 
- test('should return the first argument if it is greater', () => {
+    it('should return the first argument if it is greater', () => {
     //In this test case we use AAA pattern
     // Arrange:- In the arrange face, we setup our test environment including any neccessary data and configurations
     // Act:- In the act face, we perform the action we wanna take
@@ -22,7 +22,15 @@ describe('max', () => {
     // Assert: Verify the TV is off.
     //we take this analozy and apply the test
     // Arrange
+      expect(max(2, 1)).toBe(2);
+    });
+   
+   it('should return the second argument if it is greater', () => {
+      expect(max(1,2)).toBe(2);
+   })
 
-    expect(max(2, 1)).toBe(2);
- })
+   it('should return the first argument if the arguments are equal', () => {
+        expect(max(1,1)).toBe(1);
+   })
+
 })
