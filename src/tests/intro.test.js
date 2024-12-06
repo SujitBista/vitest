@@ -1,5 +1,5 @@
 import { describe, test, it, expect } from "vitest";
-import { max } from '../intro';
+import { fizzBuzz, max } from '../intro';
 //describe: for creating a test suite or group of related test
 //we pass two arguments. The first argument is a string i.e name of our test suite. Typically we use the name of the function or unit under test. In this case max.
 //Second argument will be the function that will be called by our test runner in this case vitest
@@ -33,4 +33,19 @@ describe('max', () => {
         expect(max(1,1)).toBe(1);
    })
 
+})
+
+describe('fizzBuzz', () => {
+   it('should return FizBuzz string if number is divisible by 3 and 5', () => {
+      expect(fizzBuzz(15)).toBe('FizzBuzz');
+   });
+   it('should return Fizz string if a number is divisible by 3', () => {
+      expect(fizzBuzz(6)).toBe('Fizz');
+   })
+   it('should return Buzz if number is divisible by 5', () => {
+      expect(fizzBuzz(5)).toBe('Buzz');
+   })
+   it('should return the number as a string if it is not divisible by both 3 and 5', () => {
+      expect(fizzBuzz(7)).toBe('7');
+   })
 })
